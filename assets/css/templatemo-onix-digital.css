@@ -880,17 +880,70 @@ Banner Style
   height: 532px;
 }
 
-.main-banner:before {
-  content: '';
-  background-image: url(../images/frontimage1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  right: 0;
-  top: 100px;
-  width: 819px;
-  height: 674px;
+/* New styles for the combined content and image card */
+.content-card {
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Space inside the card */
+  box-shadow: 0 4px 8px rgba(168, 219, 238, 0.1); /* Subtle shadow */
+  display: flex; /* Flexbox to arrange text and image side by side */
+  flex-direction: row; /* Ensure content and image are side by side */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* Full width */
 }
+
+/* Keep the image responsive and properly aligned */
+.image-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.image-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(192, 224, 236, 0.1); /* Optional: Adds a shadow */
+}
+
+.down-buttons {
+  display: flex; /* Aligns the buttons in a row */
+  flex-wrap: wrap; /* Allows wrapping of buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+.call-button {
+  flex: 1; /* Makes the button grow to fill available space */
+  min-width: 150px; /* Minimum width to maintain visibility */
+}
+
+.call-button a {
+  display: flex; /* Use flex for better alignment */
+  align-items: center; /* Center the icon and text */
+  white-space: nowrap; /* Prevents text from wrapping */
+  font-size: 1rem; /* Base font size */
+  margin-top: -2px;
+  text-decoration: none; /* Remove underline from link */
+  overflow: hidden; /* Hides overflow */
+  text-overflow: ellipsis; /* Adds ellipsis if text is too long */
+  padding: 10px; /* Add some padding for better click area */
+  border-radius: 5px; /* Optional: rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.call-button a:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Light background on hover */
+}
+
+@media (max-width: 768px) {
+  .call-button a {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+
 
 .main-banner .item {
   margin-right: 45px;
