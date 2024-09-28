@@ -9,12 +9,16 @@
 .owl-carousel {
   display: none;
   width: 100%;
+  overflow: hidden;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;
   z-index: 1; }
   .owl-carousel .owl-stage {
+    display: flex;              /* Ensure the stage is a flex container */
+  width: 100%;                /* Full width for the stage */
     position: relative;
+    overflow: hidden;
     -ms-touch-action: pan-Y;
     touch-action: manipulation;
     -moz-backface-visibility: hidden;
@@ -23,12 +27,15 @@
     content: ".";
     display: block;
     clear: both;
+    overflow: hidden;
     visibility: hidden;
     line-height: 0;
     height: 0; }
   .owl-carousel .owl-stage-outer {
     position: relative;
     overflow: hidden;
+    padding-right: 3px;
+    padding-left: 3px;
     /* fix for flashing background */
     -webkit-transform: translate3d(0px, 0px, 0px); }
   .owl-carousel .owl-wrapper,
